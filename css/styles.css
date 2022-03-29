@@ -138,6 +138,7 @@ img {
   display: block;
   padding: 32px 0;
   color: var(--title-text-color);
+  position: relative;
 }
 
 .site-nav-item:not(:last-child) {
@@ -146,6 +147,18 @@ img {
 
 .site-nav .current {
   color: var(--accent-color);
+}
+
+.current::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
 }
 
 .site-nav-link:hover,
@@ -516,15 +529,6 @@ img {
 }
 
 /* Cтили для страницы портфолио */
-
-.site-nav .current {
-  color: var(--accent-color);
-}
-
-.site-nav .current:hover,
-.site-nav .current:focus {
-  color: var(--accent-color);
-}
 
 /* Кнопка */
 
