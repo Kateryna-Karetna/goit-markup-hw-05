@@ -366,8 +366,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
 
   font-weight: 700;
   font-size: 14px;
@@ -461,6 +459,8 @@ img {
 }
 
 .social-links {
+  transition: fill var(--anim-duration) var(--cubic);
+
   background-size: 20px;
   background-position: center;
   fill: #afb1b8;
@@ -478,6 +478,8 @@ img {
 }
 
 .logo-clients {
+  transition: fill var(--anim-duration) var(--cubic);
+
   fill: #afb1b8;
 }
 
@@ -618,17 +620,16 @@ img {
   line-height: 1.62;
   text-align: center;
 
-  color: var(--title-text-color);
-  background-color: var(--bgc-secondary-color);
-
   cursor: pointer;
   border: none;
+  border-radius: 4px;
+
+  color: var(--title-text-color);
+  background-color: var(--bgc-secondary-color);
 }
 
 .button:hover,
 .button:focus {
-  border-radius: 4px;
-
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -637,6 +638,11 @@ img {
 
 .btn-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.btn-portfolio {
+  transition: box-shadow var(--anim-duration) var(--cubic), color var(--anim-duration) var(--cubic),
+    background-color var(--anim-duration) var(--cubic);
 }
 
 /* Секция портфолио */
@@ -655,6 +661,8 @@ img {
 }
 
 .portfolio-link {
+  transition: box-shadow var(--anim-duration) var(--cubic);
+
   display: block;
 }
 
@@ -768,17 +776,12 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px;
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 
+  color: var(--primary-black-color);
   background-color: var(--primary-white-color);
 }

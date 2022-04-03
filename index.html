@@ -409,7 +409,11 @@
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-wrapper">
-        <button class="modal-button" type="button" data-modal-close>X</button>
+        <button class="modal-button" type="button" data-modal-close>
+          <svg class="close-btn" width="11" height="11">
+            <use href="./images/icons/modal.svg#modal"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
